@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>392380799521-01qasbekpi9v29qaosmocni7nhi3k0oh.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.392380799521-01qasbekpi9v29qaosmocni7nhi3k0oh</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAD0qXSHTPmTf2C_L9SoSY7bJ4t9HLqL6g</string>
+	<key>GCM_SENDER_ID</key>
+	<string>392380799521</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.tarobanews.app</string>
+	<key>PROJECT_ID</key>
+	<string>taroba-news-9455f</string>
+	<key>STORAGE_BUCKET</key>
+	<string>taroba-news-9455f.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:392380799521:ios:9d7765d7c9bf944a</string>
+	<key>DATABASE_URL</key>
+	<string>https://taroba-news-9455f.firebaseio.com</string>
+</dict>
+</plist>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "392380799521",
+    "firebase_url": "https://taroba-news-9455f.firebaseio.com",
+    "project_id": "taroba-news-9455f",
+    "storage_bucket": "taroba-news-9455f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:392380799521:android:9d7765d7c9bf944a",
+        "android_client_info": {
+          "package_name": "com.tarobanews.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "392380799521-d70b76p8frricbiv6su9fk5nnjp9qj8r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAB0UH2kI4kPJFYLR2iPyZmMF4Cujw2HKg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

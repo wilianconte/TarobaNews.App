@@ -1,0 +1,1216 @@
+        /*=============== CSS GLOBAL - INICIO ==================*/
+
+h1 {
+	font-size: 2em;
+}
+
+body h1, h2, h3, h4, h5, h6{
+	font-size: 1.2em!important;
+    font-family: 'Roboto', sans-serif;
+    max-height: 40px;
+    padding-bottom: 18px;
+    margin-left: 5px;
+}
+
+h3{
+	font-size: 1em;
+}
+
+h4{
+	font-size: 0.5em;
+}
+
+h5{
+	font-size: 0.2em;
+}
+
+p{
+    margin: 0px!important;
+}
+
+@font-face{
+    font-family: 'opensans-regular';
+    src:url("../fonts/OpenSans-Regular.ttf");
+}
+
+a {
+    color:#333!important;
+}
+
+/*=============== CSS GLOBAL - FIM ==================*/
+
+
+/*---------------------------------------------------------------------------------------------------*/
+
+
+/*=============== CSS TOPO - INICIO ==================*/
+
+.barra-topo{
+	width: 100%;
+	height: 64px;
+	background-color: #297ACC!important;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.menu-trigger{
+    margin-left: 18px;
+    cursor: pointer;
+}
+
+.logo-topo{
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.lupa{
+    margin-right: 15px;
+}
+
+/*------------------------------------*/
+
+.barra-topo-esporte{
+    background-color: #72BE44 !important;
+    width: 100%;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.barra-topo-esporte img:first-child{
+    margin-left: 15px;
+}
+
+.barra-topo-esporte img:last-child{
+    margin-right: 15px;
+}
+
+/*------------------------------------*/
+
+/*------------------------------------*/
+
+.barra-topo-noticias{
+    background-color: #CD3539 !important;
+    width: 100%;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.barra-topo-noticias img:first-child{
+    margin-left: 15px;
+}
+
+.barra-topo-noticias img:last-child{
+    margin-right: 15px;
+}
+
+/*------------------------------------*/
+
+.barra-topo-entretenimento{
+    background-color: #297ACC !important;
+    width: 100%;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.barra-topo-entretenimento img:first-child{
+    margin-left: 15px;
+}
+
+.barra-topo-entretenimento img:last-child{
+    margin-right: 15px;
+}
+
+/*------------------------------------*/
+
+.barra-topo-blog {
+    background-color: #5D5D5D !important;
+    width: 100%;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.barra-topo-blog  img:first-child{
+    margin-left: 15px;
+}
+
+.barra-topo-blog  img:last-child{
+    margin-right: 0px;
+}
+
+
+
+
+
+
+/*=============== CSS TOPO - FIM ==================*/
+
+/*---------------------------------------------------------------------------------------------------*/
+
+/*=============== CSS SECTION-1 - INICIO ==================*/
+
+.bloco-1-home{
+	margin: 10px;
+    position: relative;
+}
+
+.bloco-1-home-sobreposicao{
+	height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.bloco-1-home-sobreposicao p{
+    color: #fff;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+
+
+.bloco-1-home-sobreposicao h2{
+	border-bottom: solid 2px #72BE44;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 6px;
+    margin-left: 11px;
+    color: #fff;
+    font-size: 1em;
+    display: inline-block;
+    position: absolute;
+    bottom: 63px;
+}
+
+.bloco-1-home-sobreposicao h3{
+	color: #fff;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 28px;
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 22px;
+}
+
+.bloco-1-home-infos{
+    z-index: 999;
+}
+
+/*=============== CSS SECTION-1 - FIM ==================*/
+
+/*---------------------------------------------------------------------------------------------------*/
+
+/*=============== CSS SECTION-2 - INICIO ==================*/
+
+
+.bloco-2-home{
+	max-width: 100%;
+    height: auto;
+    background-color: #eee;
+    margin: 10px;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.bloco-2-img{
+	min-width: 104px;
+    min-height: 83px;
+    max-width: 307px;
+    margin: 10px;
+}
+
+.bloco-2-img img{
+	max-width: 100%;
+}
+
+.bloco-2-sub{
+   display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: auto;
+    margin: 10px;
+}
+
+.bloco-2-sub h2{
+	border-bottom: solid 2px #72BE44;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 5px;
+    margin-left: 11px;
+    color: #474746;
+    font-size: 1em;
+    font-weight: 600;
+    margin:0px;
+    height: 26px;
+}
+
+.bloco-2-sub h3{
+	font-family: 'Roboto', sans-serif;
+    margin-left: 11px;
+    font-weight: 600;
+    color: #474746;
+    font-size: 0.8em;
+    margin-right: 11px;
+    margin:0px;
+}
+
+.bloco-2-sub h6{
+	font-family: 'Roboto', sans-serif;
+    margin-left: 11px;
+    font-weight: 600;
+    color: #474746;
+    margin:0px;
+}
+
+/*=============== CSS SECTION-2 - FIM ==================*/
+
+/*---------------------------------------------------------------------------------------------------*/
+
+/*=============== CSS SECTION-3-VIDEO - INICIO ==================*/
+
+.bloco-video-sobreposicao{
+    height: 98%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    position: absolute;
+    bottom: 4px;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.bloco-video-sobreposicao h2{
+    border-bottom: solid 2px #72BE44;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 5px;
+    margin-left: 11px;
+    color: #fff;
+    font-size: 1em;
+    display: inline-block;
+    position: absolute;
+    bottom: 70px;
+}
+
+.bloco-video-sobreposicao h3{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 18px;
+    margin-left: 11px;
+    line-height: 22px;
+}
+
+.video1{
+    display: flex;
+    justify-content: center;
+}
+
+.video1{
+    position: relative;
+}
+
+/*--------novo-------*/
+
+
+.secao-3-video{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.secao-3-video a{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.secao-3-video img{
+    width: 100%;
+}
+
+.fa-icon-video{
+    position: absolute;
+    right: 4%;
+    top: 4%;
+    z-index: 0!important;
+    color: rgba(255, 255, 255, .85);
+}
+
+.fa-icon-aovivo{
+    color: red;
+}
+
+
+.ao-vivo{
+    position: absolute!important;
+    right: 2%!important;
+    top: 3%!important;
+    z-index: 1!important;
+    color: #fff;
+}
+
+/*=============== CSS SECTION-3-VIDEO - FIM ==================*/
+
+/*---------------------------------------------------------------------------------------------------*/
+
+/*=============== CSS SECTION-4- EDITORIAL NOTICIAS- INICIO ==================*/
+
+.cabecalho-editorial-noticias{
+   width: 96%;
+    height: 50px;
+    border-bottom: solid 2px #C52D37;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.cabecalho-editorial-noticias h2{
+    color: #C52D37;
+    font-family: 'Roboto', sans-serif!important;
+    margin: 0;
+    padding-left: 10px;
+}
+
+.cabecalho-editorial-noticias p{
+    color: #C52D37;
+    font-family: 'Roboto', sans-serif!important;
+    padding-right: 10px;
+}
+
+/*=============== CSS SECTION-4- EDITORIAL NOTICIAS- FIM ==================*/
+
+/*---------------------------------------------------------------------------------------------------*/
+
+/*=============== CSS SECTION-4- EDITORIAL ESPORTE- INICIO ==================*/
+
+.cabecalho-editorial-esporte{
+   width: 96%;
+    height: 50px;
+    border-bottom: solid 2px #6BB745;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.cabecalho-editorial-esporte h2{
+    color: #6BB745;
+    font-family: 'Roboto', sans-serif!important;
+        margin: 0;
+        padding-left: 10px;
+}
+
+.cabecalho-editorial-esporte p{
+    color: #6BB745;
+    font-family: 'Roboto', sans-serif!important;
+    padding-right: 10px;
+}
+
+/*=============== CSS SECTION-4- EDITORIAL ESPORTE- FIM ==================*/
+
+/*---------------------------------------------------------------------------------------------------*/
+
+/*=============== CSS SECTION-4- EDITORIAL ENTRETENIMENTO- INICIO ==================*/
+
+.cabecalho-editorial-entretenimento{
+   width: 96%;
+    height: 50px;
+    border-bottom: solid 2px #2A71C3;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.cabecalho-editorial-entretenimento h2{
+    color: #2A71C3;
+    font-family: 'Roboto', sans-serif!important;
+        margin: 0;
+        padding-left: 10px;
+}
+
+.cabecalho-editorial-entretenimento p{
+    color: #2A71C3;
+    font-family: 'Roboto', sans-serif!important;
+    padding-right: 10px;
+}
+
+/*=============== CSS SECTION-4- EDITORIAL ENTRETENIMENTO- FIM ==================*/
+
+/*=============== CSS SECTION-4- EDITORIAL BLOG- INICIO ==================*/
+
+.cabecalho-editorial-blog{
+   width: 96%;
+    height: 50px;
+    border-bottom: solid 2px #545454;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.cabecalho-editorial-blog h2{
+    color: #545454;
+    font-family: 'Roboto', sans-serif!important;
+        margin: 0;
+        padding-left: 10px;
+}
+
+.cabecalho-editorial-blog p{
+    color: #545454;
+    font-family: 'Roboto', sans-serif!important;
+    padding-right: 10px;
+}
+
+/*=============== CSS SECTION-4- EDITORIAL BLOG - FIM ==================*/
+
+/*---------------------------------------------------------------------------------------------------*/
+
+/*=============== CSS POST-FEED MOD-2- INICIO ==================*/
+
+.feed-post{
+    background-color: #eee;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.feed-post-imagem{
+    position: relative;
+    width: 35%;
+    height: 100px;
+    overflow: hidden;
+    margin: 5px;
+}
+
+.feed-post-imagem img{
+   position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  width: auto;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+
+.feed-post-header{
+    width: 61%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 4px;
+    padding-right: 7px;
+}
+
+.feed-post-categoria-noticia p{
+    border-bottom: solid 2px #C52D37;
+    font-family:'opensans-regular';
+    font-weight: 900;
+}
+
+.feed-post-categoria-esporte p{
+    border-bottom: solid 2px #6BB745;
+    font-family:'opensans-regular';
+    font-weight: 900;
+}
+
+.feed-post-categoria-entretenimento p{
+    border-bottom: solid 2px #2A71C3;
+    font-family:'opensans-regular';
+    font-weight: 900;
+}
+
+.feed-post-categoria-blogs p{
+    border-bottom: solid 2px #5D5D5D;
+    font-family:'opensans-regular';
+    font-weight: 900;
+}
+
+.feed-post-resumo
+{
+    min-width: 150px;
+}
+.feed-post-resumo p{
+    font-family:'opensans-regular';
+}
+
+.feed-post-resumo a{
+    color: #333!important;
+}
+
+
+
+.feed-post-header span{
+    font-family:'opensans-regular';
+    font-weight: 600;
+    font-size: 0.7em; 
+}
+
+.feed-post-titulo{
+    width: 100%;
+}
+
+.feed-post-titulo p{
+    font-family:'opensans-regular';
+    font-weight: 700;
+    font-size: 0.8em;
+}
+
+
+/*=============== CSS POST-FEED-MOD-2 FIM ==================*/
+
+/*---------------------------------------------------------------------------------------------------*/
+
+/*=============== CSS POST-FEED-MOD-1 FIM ==================*/
+
+.feed-post-categoria-mod-1-noticias p{
+    border-bottom: solid 2px #C52D37;
+    font-family:'opensans-regular';
+    font-weight: 900;
+}
+
+.feed-post-categoria-mod-1-esporte p{
+    border-bottom: solid 2px #6BB745;
+    font-family:'opensans-regular';
+    font-weight: 900;
+}
+
+.feed-post-categoria-mod-1-entretenimento p{
+    border-bottom: solid 2px #2A71C3;
+    font-family:'opensans-regular';
+    font-weight: 900;
+}
+
+
+.feed-post-mod-1{
+   background-color: #eee;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.feed-post-header-mod-1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 4px;
+    padding-right: 7px;
+    padding-left: 7px;
+}
+
+.feed-post-resumo-mod-1{
+    font-family: 'opensans-regular';
+    padding-top: 10px;
+    padding-bottom: 5px;
+    min-width: 320px;    
+}
+
+.feed-post-header-mod-1 span {
+    font-family: 'opensans-regular';
+    font-weight: 600;
+    font-size: 0.7em;
+}
+
+/*=============== CSS POST-FEED-MOD-1 FIM ==================*/
+
+/*---------------------------------------------------------------------------------------------------*/
+
+/*=============== CSS BLOG- INICIO ==================*/
+
+.blog-area{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*=============== CSS BLOG- FIM ==================*/
+
+/*---------------------------------------------------------------------------------------------------*/
+
+/*=============== CSS FOOTER- INICIO ==================*/
+
+.grupo-footer{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: auto;
+        background-color: #ECECEC;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-top: 10px;
+}
+
+.grupo-footer img{
+    height: 20px;
+    margin-right: 14px;
+}
+
+/*=============== CSS FOOTER- INICIO ==================*/
+
+/*---------------------------------------------------------------------------------------------------*/
+
+/*=============== CSS PAGINA BLOG - INICIO ==================*/
+
+.bloco-blog{
+    width: 95%;
+    margin: 0 auto;
+    background-color: #eee;
+    margin-top: 10px;
+    position: relative;
+}
+
+.bloco-blog-img{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.bloco-blog-img img{
+        margin-top: 7px;
+    width: 100%;
+    height: auto;
+    padding-left: 7px;
+    padding-right: 7px;   
+}
+
+.bloco-blog-titulo{
+    font-family: 'opensans-regular';
+    font-weight: 800;
+    font-size: 1.3em;
+}
+
+.bloco-blog-resumo{
+    font-family: 'opensans-regular';
+    font-weight: 800;
+    font-size: 0.9em;
+    padding-top: 10px;
+}
+
+.bloco-blog-infos{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 6px;
+}
+
+.bloco-blog-data-hora{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.bloco-blog-data-hora p,a{
+    font-family: 'opensans-regular';
+    font-weight: 800;
+}
+
+
+/*=============== CSS PAGINA BLOG - INICIO ==================*/
+
+
+/*=================== BLOCO AUTOR - INICIO ==============================*/
+
+.imagem-autor{
+   width: 46%;
+    padding: 8px;
+}
+
+.imagem-autor IMG{
+   width: 100%;
+  }
+
+  .nome-autor p{
+    font-family: 'opensans-regular';
+    font-weight: 900;
+  }
+
+  .resumo-autor p{
+    font-family: 'opensans-regular';
+  }
+
+/*=================== BLOCO AUTOR - FIM ==============================*/
+
+/*=================== BLOCO SINGLE - INICIO ==============================*/
+
+.bloco-single{
+    width: 95%;
+    margin: 0 auto;
+    background-color: #fff;
+    margin-top: 9px;
+    height: auto;
+}
+
+.bloco-single-img img{
+    width: 100%;
+}
+
+.bloco-single-video iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.bloco-single-titulo{
+    font-family: 'opensans-regular';
+    font-weight: 800;
+    font-size: 1.3em;
+    padding-top: 10px;
+    padding-left: 5px;
+
+}
+
+.bloco-single-data{
+    font-family: 'opensans-regular';
+    font-weight: 800;
+    padding-top: 5px;
+    padding-left: 5px;    
+}
+
+.bloco-single-noticia{
+    font-family: 'opensans-regular';
+    font-weight: 500;
+    font-size: 1em;
+    padding: 5px;
+    text-align: justify;
+}
+
+.bloco-single-noticia p{padding-bottom: 10px;}
+.bloco-single-noticia img{ width: 100%; height: auto;  }
+
+.redes-sociais{
+    display: flex;
+    justify-content: center;
+}
+
+.redes-sociais ul{
+    display: flex;
+    
+}
+
+.redes-sociais ul li{
+    margin-right: 15px;
+}
+
+.redes-sociais ul li:last-child{
+    margin-right: 0px;
+}
+
+.fa-facebook{
+    color: #3b5998;
+}
+
+.fa-twitter{
+    color: #00b6f1;
+}
+
+.fa-google-plus{
+    color: #df4a32;
+}
+
+.fa-whatsapp{
+    color: #25d366;
+}
+
+/*=================== BLOCO SINGLE - FIM ==============================*/
+
+.barra-estado{
+    
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    background-color: #2264a7;
+    align-items: center;
+}
+
+.barra-estado a
+{
+    line-height: 40px;
+    color: #fff !important;
+    text-align: center;
+    height: 100%;
+    width: 50%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.barra-estado a.active
+{
+    background-color: #23527c;
+}
+
+.logo-menu{
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px; 
+    text-align: center;
+}
+
+.mp-level{
+    text-align: center;
+}
+
+/*======================BARRA TITULO EDITORIAIS - INICIO=================================*/
+
+.barra-titulo-editorial{
+    display: flex;
+    justify-content: center;
+    background-color: #255b92;
+    align-items: center;
+    widows: 100%;
+}
+
+.barra-titulo-editorial p{
+    color: #fff;
+    font-family: 'opensans-regular';
+    font-weight: 900;
+    font-size: 1.3em;
+    text-align: center;
+    line-height: 40px;
+}
+
+/*====================== BARRA TITULO EDITORIAIS - INICIO =================================*/
+
+.sobreposicao-video{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.sobreposicao-video h2{
+    border-bottom: solid 2px #72BE44;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 5px;
+    margin-left: 11px;
+    color: #fff;
+    font-size: 1em;
+    display: inline-block;
+    position: absolute;
+    bottom: 53px;
+}
+
+.sobreposicao-video h3{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 18px;
+    margin-left: 11px;
+    line-height: 22px;
+}
+
+
+.video{
+    position: relative;
+    margin: 10px;
+}
+
+
+.feed-post-header-blog{
+    width: 53%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 4px;
+    padding-right: 7px;           
+}
+
+
+/*======================== PAGINA DE PESQUISA - INICIO ===============================*/
+
+.botao-fechar{
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+}
+
+.campo-digite input{
+    background-color: transparent;
+    color: #fff;
+    height: 63px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    width: 100%;
+    font-size: 1.5em;
+    text-align: center;
+    border: none;
+    border-bottom: solid 1px #fff;
+    outline: none;
+}
+
+.campo-digite{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.botao-pesquisar{
+    background-color: #fff;
+    border-radius: 4px;
+    color: #747578;
+    height: 63px;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botao-pesquisar img{
+    width: 45px;
+    margin-top: 5px;
+    margin-left: 33px;
+}
+
+.botao-pesquisar p{
+    color: #747578;
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+    padding-right: 73px;
+}
+
+.box-pesquisa{
+    background-color: rgba(62, 63, 67, 0.71);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.box-pesquisa input {
+    color: #fff;
+}
+
+.grupo{
+    margin-top: 100px;
+}
+
+.grupo a:focus{
+    background-color: rgba(0, 0, 0, 0.51);;
+    text-decoration: none;
+}
+
+.campo-digite input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #fff;
+}
+.campo-digite input::-moz-placeholder { /* Firefox 19+ */
+  color: #fff;
+}
+.campo-digite input:-ms-input-placeholder { /* IE 10+ */
+  color: #fff;
+}
+.campo-digite input:-moz-placeholder { /* Firefox 18- */
+  color: #fff;
+}
+
+.campo-digite input:focus::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(0, 0, 0, 0);
+}
+.campo-digite input:focus::-moz-placeholder { /* Firefox 19+ */
+  color: rgba(0, 0, 0, 0);
+}
+.campo-digite input:focus:-ms-input-placeholder { /* IE 10+ */
+  color: rgba(0, 0, 0, 0);
+}
+.campo-digite input:focus:-moz-placeholder { /* Firefox 18- */
+  color: rgba(0, 0, 0, 0);
+}
+
+/*======================== PAGINA DE PESQUISA - FIM ===============================*/
+
+.box-load
+{
+    padding-top: 45%;
+    text-align: center;
+    background-color: #2A71C3;
+    position: fixed; /* Stay in place */
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*=============================== TÍTULO DOS MENUS - INICIO ================================*/
+
+.titulo-menu-noticias{
+    color: #C52D37!important;
+    font-size: 1.5em!important;
+    font-family: 'Roboto', sans-serif!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-menu-esporte{
+    color: #6BB745!important;
+    font-size: 1.5em!important;
+    font-family: 'Roboto', sans-serif!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-menu-entretenimento{
+    color: #2A71C3!important;
+    font-size: 1.5em!important;
+    font-family: 'Roboto', sans-serif!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-menu-blog{
+    color: #5D5D5D!important;
+    font-size: 1.5em!important;
+    font-family: 'Roboto', sans-serif!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-menu-videos{
+    color: #FD8F24!important;
+    font-size: 1.5em!important;
+    font-family: 'Roboto', sans-serif!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*=============================== TÍTULO DOS MENUS - FIM ================================*/
+
+.ver-todas{
+        padding: 10px;
+    font-size: 1.2em;
+    text-align: center;
+    border-top: solid 2px lightgrey;
+    border-bottom: solid 1px lightgrey;
+
+}
+
+
+/*================================== SUBLINADO DOS EDITORIAIS - INICIO =============================*/
+.sublinhado-noticias{
+    border-bottom: solid 2px #CD3539!important;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 5px;
+    margin-left: 11px;
+    font-size: 1em;
+    display: inline-block;
+    position: relative;
+    
+}
+
+.sublinhado-entretenimento{
+    border-bottom: solid 2px #2A71C3!important;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 5px;
+    margin-left: 11px;
+    font-size: 1em;
+    display: inline-block;
+    position: relative;
+    
+}
+
+.sublinhado-esportes{
+    border-bottom: solid 2px #72be44!important;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 5px;
+    margin-left: 11px;
+    font-size: 1em;
+    display: inline-block;
+    position: relative;
+}
+
+.sublinhado-blogs{
+    border-bottom: solid 2px #5d5d5d!important;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 5px;
+    margin-left: 11px;
+    font-size: 1em;
+    display: inline-block;
+    position: relative;
+    
+}
+/*================================== SUBLINADO DOS EDITORIAIS - INICIO =============================*/
+
+/*========================== COREÇÃO DA ALTURA DO SLIDE DE BLOGS - INICIO =====================================*/
+
+.carousel-inner {
+   height: 275px!important;
+}
+
+/*========================== COREÇÃO DA ALTURA DO SLIDE DE BLOGS - FIM =====================================*/
+
+
+/*=========================== BOTAO VEJA MAIS DO FOOTER - PAGINA DE NOTICIAS - INICIO ===============================*/
+
+.botao-veja-mais-rodape{
+    width: 95%;
+    height: auto;
+    background-color: #CD3539;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: block;
+    text-decoration: none!important;
+}
+
+.botao-veja-mais-rodape:focus{
+    background-color: #971e22;
+    text-decoration: none!important;
+}   
+
+.botao-veja-mais-rodape p {
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3em;
+    text-decoration: none!important;
+}
+
+/*=========================== BOTAO VEJA MAIS DO FOOTER - PAGINA DE NOTICIAS - FIM ===============================*/
+
+
+.hidden {
+    display: none;
+}
+
+.content
+{
+    min-height: 500px;
+}
+
+/* TAP EFFECT */
+
+/* a {
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.3) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.3) 100%);
+} */
+ 
+a.tapped {
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.1) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.1) 100%);
+}
