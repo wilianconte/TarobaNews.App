@@ -115,13 +115,12 @@
     <plugin name="cordova-plugin-network-information" spec="~1.3.3" />
     <plugin name="cordova-plugin-vibration" spec="~2.1.5" />
     <plugin name="cordova-plugin-ios-camera-permissions" spec="~1.2.0">
-        <variable name="CAMERA_USAGE_DESCRIPTION" value="Need acces to your camera" />
-        <variable name="MICROPHONE_USAGE_DESCRIPTION" value="Need acces to your microphone" />
-        <variable name="PHOTOLIBRARY_ADD_USAGE_DESCRIPTION" value="Need acces to your photo library" />
-        <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="Need acces to your library" />
+        <variable name="CAMERA_USAGE_DESCRIPTION" value="your usage message" />
+        <variable name="MICROPHONE_USAGE_DESCRIPTION" value="your microphone usage message here" />
+        <variable name="PHOTOLIBRARY_ADD_USAGE_DESCRIPTION" value="your photo library usage message here" />
+        <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="your photo library usage message here" />
     </plugin>
-    <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
-    <plugin name="phonegap-plugin-push" spec="^2.1.1">
-        <variable name="FCM_VERSION" value="11.0.1" />
-    </plugin>
+    <plugin name="cordova-plugin-whitelist" spec="~1.3.3" />
+    <engine name="ios" spec="~4.5.4" />
+    <plugin name="phonegap-plugin-push" spec="^2.1.1" />
 </widget>
