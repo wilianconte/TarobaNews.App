@@ -241,7 +241,7 @@ var app = {
   },
   onDeviceReady : function ()
   {
-      //fcm.initialize();
+      fcm.initialize();
 
       SetTapEffect();
     
