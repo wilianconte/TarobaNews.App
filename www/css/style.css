@@ -1214,3 +1214,33 @@ a.tapped {
     background: -webkit-linear-gradient(top, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.1) 100%);
     background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.1) 100%);
 }
+
+/* TESTE SLIDER */
+
+.gallery img{
+    width:auto; 
+    height:80px; 
+    margin-right: -4px;
+}
+
+.bloco-galeria{
+    max-width:300px;
+    margin:0 auto; 
+    margin-top: 15px; 
+    text-align: center;
+}
+
+@media (min-width:380px) and (max-width:1366px){
+    .bloco-galeria {
+        max-width: 467px;
+        margin: 0 auto;
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    .gallery img{
+        width:auto; 
+        height:100px; 
+        margin-right: -4px;
+    }
+}
