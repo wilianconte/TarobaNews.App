@@ -1217,9 +1217,9 @@ a.tapped {
 
 /* TESTE SLIDER */
 
-.gallery img{
-    width:auto; 
-    height:80px; 
+.gallery img:last-child{
+    width: 100%;
+    height: auto;
     margin-right: -4px;
 }
 
@@ -1230,17 +1230,26 @@ a.tapped {
     text-align: center;
 }
 
-@media (min-width:380px) and (max-width:1366px){
+.icone-galeria {
+    width: 34px;
+    height: auto;
+    position: absolute;
+    right: 0;
+    margin-right: 4%;
+    margin-top: 13px;
+}
+
+@media (min-width:320px) and (max-width:1366px){
     .bloco-galeria {
-        max-width: 467px;
+        max-width: 95%;
         margin: 0 auto;
         margin-top: 15px;
         text-align: center;
     }
 
-    .gallery img{
-        width:auto; 
-        height:100px; 
+    .gallery img:last-child{
+        width:100%; 
+        height:auto; 
         margin-right: -4px;
     }
 }

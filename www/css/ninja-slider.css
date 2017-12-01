@@ -52,7 +52,7 @@
     font-size:0px;
     position:relative;
     box-sizing:border-box;
-    padding-bottom:100px!important;
+    padding-bottom:0px!important;
 }
 
 #ninja-slider.fullscreen .slider-inner {
