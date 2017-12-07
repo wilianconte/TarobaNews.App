@@ -228,6 +228,20 @@ function LoadBlogs(homeId) {
 
 //---------------------------------------------------------------------------
 
+// set to either landscape
+function LockScreen()
+{
+  screen.lockOrientation('portrait');
+}
+
+// allow user rotate
+function LockScreen()
+{
+  screen.unlockOrientation();
+}
+
+//---------------------------------------------------------------------------
+
 //APP
 var app = {
 
@@ -242,6 +256,8 @@ var app = {
   onDeviceReady : function ()
   {
       fcm.initialize();
+
+      LockScreen();
 
       SetTapEffect();
     
