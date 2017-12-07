@@ -28,7 +28,6 @@ function LoadNews() {
 
             for (let img of data.GalleryImg)
               $('.slider-inner ul').append('<li><a class="ns-img" href="' + img + '"></a></li>');
-
           }
           else if(data.DestaqueId != 0)
           {

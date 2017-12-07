@@ -192,7 +192,8 @@ function LoadBlogs(homeId) {
       }
 
       feed.find(".fild-img").attr("src", element.Img).addClass('center-block');
-      //feed.find(".fild-blog").attr("href", 'lista.html?type=blog&url=' + element.Url);
+      feed.find(".fild-blog").data('type','blog');
+      feed.find(".fild-blog").data('url',element.Url);      
       feed.find(".fild-titulo").text(element.Titulo);
       feed.find(".fild-news-url").attr("href", 'news.html?url=' + element.NoticiaUrl);
       feed.find(".fild-news-titulo").text(element.NoticiaTitulo);

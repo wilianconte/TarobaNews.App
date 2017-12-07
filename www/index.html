@@ -176,8 +176,8 @@
 				<img class="fild-img" src="#" heigh="184px" width="100%">
 				<div class="bloco-1-home-sobreposicao">
 					<i class="fild-icon-video fa fa-play-circle fa-2x fa-icon-video" hidden></i>
-					<!--<i class="fa fa-picture-o fa-2x fa-icon-video"></i>-->
-					<!--<span class="ao-vivo"><i class="fa fa-circle fa-1x fa-icon-aovivo"></i> AO VIVO</span>-->
+					<i class="fa fa-picture-o fa-2x fa-icon-video" hidden></i>
+					<span class="ao-vivo" hidden><i class="fa fa-circle fa-1x fa-icon-aovivo"></i> AO VIVO</span>
 					<p class="fild-published">há 4 horas</p>
 					<a class="fild-hat-url" href="#"><h2 class="fild-hat">Categoria</h2></a>
 					<a class="fild-news-url" href="#"><h3 class="fild-news-titulo">Título</h3></a>
@@ -226,21 +226,6 @@
 				</div>
 			</div>
 
-			<!-- Blog / List -->
-			<div class="hidden feed-model-blogs feed-post">
-				<div class="imagem-autor">
-					<a class="fild-blog" href="#"><img class="fild-img"></a>
-				</div>
-				<div class="feed-post-header-blog">
-					<div class="nome-autor">
-							<a class="fild-blog" href="#"><p class="fild-titulo">Título do Blog</p></a>
-					</div>
-					<div class="resumo-autor">
-						<a class="fild-news-url" href="#"><p class="fild-news-titulo">Os desafios da alimentação</p></a>
-					</div>
-				</div>
-			</div>
-
 			<!-- Página Home -->
 			<div id="pg-home" class="page">
 				
@@ -250,8 +235,8 @@
 
 				<!-- EDITORIAL NOTÍCIAS -->
 				<div class="cabecalho-editorial-noticias">
-					<a onclick="javascript:LoadOpenList('editorial', 'noticias', null);" href="#"><h2>Notícias</h2></a>
-					<a onclick="javascript:LoadOpenList('editorial', 'noticias', null);" href="#"><p>VEJA MAIS</p></a>
+					<a class="link-menu" data-type="editorial" data-editorial="noticias" href="#"><h2>Notícias</h2></a>
+					<a class="link-menu" data-type="editorial" data-editorial="noticias" href="#"><p>VEJA MAIS</p></a>
 				</div>
 
 				<div class="feeds-noticia">
@@ -259,8 +244,8 @@
 				
 				<!-- EDITORIAL ESPORTE -->
 				<div class="cabecalho-editorial-esporte">
-					<a onclick="javascript:LoadOpenList('editorial', 'esportes', null);" href="#"><h2>Esporte</h2></a>
-					<a onclick="javascript:LoadOpenList('editorial', 'esportes', null);" href="#"><p>VEJA MAIS</p></a>
+					<a class="link-menu" data-type="editorial" data-editorial="esportes" href="#"><h2>Esporte</h2></a>
+					<a class="link-menu" data-type="editorial" data-editorial="esportes" href="#"><p>VEJA MAIS</p></a>
 				</div>
 
 				<div class="feeds-esporte">
@@ -268,8 +253,8 @@
 
 				<!-- EDITORIAL ENTRETENIMENTO -->
 				<div class="cabecalho-editorial-entretenimento">
-					<a onclick="javascript:LoadOpenList('editorial', 'entretenimento', null);" href="#"><h2>Entretenimento</h2></a>
-					<a onclick="javascript:LoadOpenList('editorial', 'entretenimento', null);" href="#"><p>VEJA MAIS</p></a>
+					<a class="link-menu" data-type="editorial" data-editorial="entretenimento" href="#"><h2>Entretenimento</h2></a>
+					<a class="link-menu" data-type="editorial" data-editorial="entretenimento" href="#"><p>VEJA MAIS</p></a>
 				</div>
 
 				<div class="feeds-entretenimento">
