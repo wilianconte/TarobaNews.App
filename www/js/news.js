@@ -12,13 +12,23 @@ function LoadNews() {
       var jqxhr = $.get(www)
       .done(function(data, status) {
           
-          $(".fild-titulo").text(data.Titulo);     
+          $(".fild-titulo").text(data.Titulo); 
 
           if(data.DestaqueId == 2)
           {
-              $('.bloco-single-video').show();
               $('.bloco-single-img').hide();
+              $('.bloco-single-video').show();
               $('.fild-video').attr("src",data.VideoUrl);
+          }
+          else if(data.DestaqueId == 3)
+          {
+            $('.bloco-single-img').hide();
+            $('.bloco-galeria').show();
+            $('.fild-img-gallery').attr("src",data.Img);
+
+            for (let img of data.GalleryImg)
+              $('.slider-inner ul').append('<li><a class="ns-img" href="' + img + '"></a></li>');
+
           }
           else if(data.DestaqueId != 0)
           {
@@ -46,10 +56,16 @@ function LoadNews() {
             if (str.match("^//")) 
               $(this).attr('src', 'https:' + str)
           });
+
+          //Fix style img
+          $(".fild-conteudo").find('img').each(function() {
+              $(this).removeAttr('style');
+          });
           
       })
       .fail(function(e) {
-        alert("Não foi possível carregar os dados!");
+        console.log(e);
+        //alert("Não foi possível carregar os dados!");
       })
       .always(function() {
         CloseLoad();
@@ -62,7 +78,10 @@ function LoadNews() {
 var app = {  
   
   initialize: function () {
-
+    document.addEventListener('deviceready', this.onDeviceReady, false);
+  },
+  onDeviceReady : function ()
+  {
     SetSearch();
 
     SetOpenList();
@@ -75,6 +94,5 @@ var app = {
     menuItem = new mlPushMenu(document.getElementById('mp-menu'), document.getElementById('trigger'), {
       type: 'cover'
     });		
-
   }
 };

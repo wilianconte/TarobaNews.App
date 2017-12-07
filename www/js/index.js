@@ -231,13 +231,15 @@ function LoadBlogs(homeId) {
 // set to either landscape
 function LockScreen()
 {
-  screen.lockOrientation('portrait');
+  if(device.platform != 'browser')
+    screen.lockOrientation('portrait');
 }
 
 // allow user rotate
-function LockScreen()
+function UnLockScreen()
 {
-  screen.unlockOrientation();
+  if(device.platform != 'browser')
+    screen.unlockOrientation();
 }
 
 //---------------------------------------------------------------------------
@@ -255,6 +257,7 @@ var app = {
   },
   onDeviceReady : function ()
   {
+    if(device.platform != 'browser')
       fcm.initialize();
 
       LockScreen();
