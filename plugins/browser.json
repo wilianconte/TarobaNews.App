@@ -45,6 +45,9 @@
     },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.tarobanews.app"
+    },
+    "phonegap-plugin-push": {
+      "PACKAGE_NAME": "com.tarobanews.app"
     }
   },
   "dependent_plugins": {
