@@ -39,7 +39,6 @@ a {
 
 /*=============== CSS GLOBAL - FIM ==================*/
 
-
 /*---------------------------------------------------------------------------------------------------*/
 
 
@@ -59,14 +58,23 @@ a {
     cursor: pointer;
 }
 
+.btn-voltar{
+    margin-left: 18px;
+    cursor: pointer;
+    color: #fff;
+}
+
 .logo-topo{
     margin-left: 10px;
     cursor: pointer;
 }
 
-.lupa{
+
+.troca-lupa{
     margin-right: 15px;
 }
+
+
 
 /*------------------------------------*/
 
@@ -1213,4 +1221,43 @@ a {
 a.tapped {
     background: -webkit-linear-gradient(top, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.1) 100%);
     background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.1) 100%);
+}
+
+/* TESTE SLIDER */
+
+.gallery img:last-child{
+    width: 100%;
+    height: auto;
+    margin-right: -4px;
+}
+
+.bloco-galeria{
+    max-width:300px;
+    margin:0 auto; 
+    margin-top: 15px; 
+    text-align: center;
+}
+
+.icone-galeria {
+    width: 34px;
+    height: auto;
+    position: absolute;
+    right: 0;
+    margin-right: 4%;
+    margin-top: 13px;
+}
+
+@media (min-width:320px) and (max-width:1366px){
+    .bloco-galeria {
+        max-width: 95%;
+        margin: 0 auto;
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    .gallery img:last-child{
+        width:100%; 
+        height:auto; 
+        margin-right: -4px;
+    }
 }
