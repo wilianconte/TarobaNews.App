@@ -77,12 +77,9 @@ function LoadNews() {
 var app = {  
   
   initialize: function () {
-    document.addEventListener('deviceready', this.onDeviceReady, false);
-  },
-  onDeviceReady : function ()
-  {
-    SetSearch();
 
+    SetSearch();
+    
     SetOpenList();
 
     LoadNews();
@@ -93,5 +90,7 @@ var app = {
     menuItem = new mlPushMenu(document.getElementById('mp-menu'), document.getElementById('trigger'), {
       type: 'cover'
     });		
+
   }
+
 };

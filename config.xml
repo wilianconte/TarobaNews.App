@@ -8,6 +8,7 @@
         Dirceu Wilian de Camargo Conte
     </author>
     <content src="index.html" />
+    <preference name="orientation" value="portrait" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="15" />
     <preference name="AllowInlineMediaPlayback" value="true" />
