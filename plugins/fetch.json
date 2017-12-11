@@ -119,7 +119,7 @@
   "phonegap-plugin-push": {
     "source": {
       "type": "registry",
-      "id": "phonegap-plugin-push@2.1.1"
+      "id": "https://github.com/phonegap/phonegap-plugin-push"
     },
     "is_top_level": true,
     "variables": {}

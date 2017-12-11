@@ -30,9 +30,11 @@
     }
   },
   "dependencies": {
+    "cordova": "^7.1.0",
     "cordova-android": "^6.3.0",
     "cordova-browser": "^5.0.1",
     "cordova-cli": "^1.0.0",
+    "cordova-ios": "^4.5.4",
     "cordova-plugin-battery-status": "~1.2.4",
     "cordova-plugin-camera": "~2.4.1",
     "cordova-plugin-device": "~1.1.6",
@@ -46,6 +48,6 @@
     "cordova-plugin-network-information": "~1.3.3",
     "cordova-plugin-vibration": "~2.1.5",
     "cordova-plugin-whitelist": "^1.3.3",
-    "phonegap-plugin-push": "^2.1.1"
+    "phonegap-plugin-push": "git+https://github.com/phonegap/phonegap-plugin-push.git"
   }
 }

@@ -242,7 +242,7 @@ var app = {
   },
   onDeviceReady : function ()
   {
-    if(device.platform != 'browser')
+    //if(device.platform != 'browser')
       fcm.initialize();
 
       SetTapEffect();
@@ -281,6 +281,8 @@ var fcm = {
 
   initialize: function () {
 
+    alert('init');
+
     var push = PushNotification.init({
       "android": {
         "icon": "tarobanews",
@@ -299,26 +301,41 @@ var fcm = {
     });
 
     push.on('registration', function (data) {
+
       var oldRegId = localStorage.getItem('registrationId');
+        
       if (oldRegId !== data.registrationId) {
         // Save new registration ID
         localStorage.setItem('registrationId', data.registrationId);
         // Post registrationId to your app server as the value has changed
       }
+
+      alert(data.registrationId);
+
     });
 
+    topic = 'news-dev';
+    
     push.subscribe(topic, function () { 
-      //alert('subscribe success: ' + topic);
+      alert('subscribe success: ' + topic);
     },
     function (e) {
-      //alert('subscribe error:' + e);
+      alert('subscribe error:' + e);
     });
 
     push.on('notification', function (data) {
+
+      navigator.notification.alert(
+        data.message,         // message
+        null,                 // callback
+        data.title,           // title
+        'Ok'                  // buttonName
+      
+      );
     });
 
     push.on('error', function (e) {
-      //alert('push error:' + e.message);
+      alert('push error:' + e.message);
     });
   }
 }
