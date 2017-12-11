@@ -1,9 +1,6 @@
 //Base Url
 var baseUrl = "http://api.tarobanews.com";
 
-//FMC Topic
-var topic = "news";
-
 var menuItem;
 //---------------------------------------------------------------------------
 

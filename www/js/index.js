@@ -242,9 +242,6 @@ var app = {
   },
   onDeviceReady : function ()
   {
-    //if(device.platform != 'browser')
-      fcm.initialize();
-
       SetTapEffect();
     
       SetLinkHome();
@@ -261,6 +258,10 @@ var app = {
       menuItem = new mlPushMenu(document.getElementById('mp-menu'), document.getElementById('trigger'), {
         type: 'cover'
       });
+
+      if(device.platform != 'browser')
+        fcm.initialize();
+          
   },
   onDeviceOnline: function () {
     //alert('On!');
@@ -277,13 +278,14 @@ var app = {
 };
 
 //FMC
+var push = {};
 var fcm = {
 
   initialize: function () {
 
-    alert('init');
+    //alert('init');
 
-    var push = PushNotification.init({
+    push = PushNotification.init({
       "android": {
         "icon": "tarobanews",
         "iconColor": "#297acc",
@@ -305,22 +307,14 @@ var fcm = {
       var oldRegId = localStorage.getItem('registrationId');
         
       if (oldRegId !== data.registrationId) {
+        
         // Save new registration ID
         localStorage.setItem('registrationId', data.registrationId);
-        // Post registrationId to your app server as the value has changed
+
+        // Subscribe
+        fcm.Sub('news-ios')
+
       }
-
-      alert(data.registrationId);
-
-    });
-
-    topic = 'news-dev';
-    
-    push.subscribe(topic, function () { 
-      alert('subscribe success: ' + topic);
-    },
-    function (e) {
-      alert('subscribe error:' + e);
     });
 
     push.on('notification', function (data) {
@@ -330,12 +324,30 @@ var fcm = {
         null,                 // callback
         data.title,           // title
         'Ok'                  // buttonName
-      
       );
+
     });
 
     push.on('error', function (e) {
-      alert('push error:' + e.message);
+      //alert('push error:' + e.message);
+    });
+  },
+  Sub : function (topic)
+  {
+    push.subscribe(topic, function () { 
+      //alert(topic  + ' sucesso!')
+    },
+    function (e) {
+      //alert('subscribe error:' + e);
+    });
+
+  },
+  UnSub : function (topic)
+  {
+    push.unsubscribe(topic, () => {
+      //alert(topic  + ' sucesso!')      
+    }, (e) => {
+      //alert('unsubscribe error:' + e);
     });
   }
 }
