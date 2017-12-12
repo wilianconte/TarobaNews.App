@@ -1,0 +1,77 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-battery-status": {
+      "PACKAGE_NAME": "com.tarobanews.app"
+    },
+    "cordova-plugin-camera": {
+      "CAMERA_USAGE_DESCRIPTION": " ",
+      "PHOTOLIBRARY_USAGE_DESCRIPTION": " ",
+      "PACKAGE_NAME": "com.tarobanews.app"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.tarobanews.app"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.tarobanews.app"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.tarobanews.app"
+    },
+    "cordova-plugin-geolocation": {
+      "GEOLOCATION_USAGE_DESCRIPTION": " ",
+      "PACKAGE_NAME": "com.tarobanews.app"
+    },
+    "cordova-plugin-globalization": {
+      "PACKAGE_NAME": "com.tarobanews.app"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.tarobanews.app"
+    },
+    "cordova-plugin-ios-camera-permissions": {
+      "CAMERA_USAGE_DESCRIPTION": "your usage message",
+      "MICROPHONE_USAGE_DESCRIPTION": "your microphone usage message here",
+      "PHOTOLIBRARY_ADD_USAGE_DESCRIPTION": "your photo library usage message here",
+      "PHOTOLIBRARY_USAGE_DESCRIPTION": "your photo library usage message here",
+      "PACKAGE_NAME": "com.tarobanews.app"
+    },
+    "cordova-plugin-media-capture": {
+      "CAMERA_USAGE_DESCRIPTION": " ",
+      "MICROPHONE_USAGE_DESCRIPTION": " ",
+      "PHOTOLIBRARY_USAGE_DESCRIPTION": " ",
+      "PACKAGE_NAME": "com.tarobanews.app"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.tarobanews.app"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.tarobanews.app"
+    },
+    "cordova-plugin-vibration": {
+      "PACKAGE_NAME": "com.tarobanews.app"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.tarobanews.app"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "PACKAGE_NAME": "com.tarobanews.app"
+    },
+    "phonegap-plugin-push": {
+      "PACKAGE_NAME": "com.tarobanews.app"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-compat": {
+      "PACKAGE_NAME": "com.tarobanews.app"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.tarobanews.app"
+    }
+  }
+}

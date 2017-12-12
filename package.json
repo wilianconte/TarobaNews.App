@@ -5,7 +5,8 @@
   "cordova": {
     "platforms": [
       "browser",
-      "android"
+      "android",
+      "ios"
     ],
     "plugins": {
       "cordova-plugin-battery-status": {},
@@ -26,7 +27,11 @@
         "PHOTOLIBRARY_USAGE_DESCRIPTION": "Need acces to your library"
       },
       "cordova-plugin-whitelist": {},
-      "phonegap-plugin-push": {}
+      "phonegap-plugin-push": {
+        "FCM_VERSION": "11.0.1"
+      },
+      "cordova-plugin-x-socialsharing": {},
+      "cordova-plugin-statusbar": {}
     }
   },
   "dependencies": {
@@ -46,8 +51,11 @@
     "cordova-plugin-ios-camera-permissions": "~1.2.0",
     "cordova-plugin-media-capture": "~1.4.3",
     "cordova-plugin-network-information": "~1.3.3",
+    "cordova-plugin-statusbar": "^2.3.0",
     "cordova-plugin-vibration": "~2.1.5",
     "cordova-plugin-whitelist": "^1.3.3",
-    "phonegap-plugin-push": "git+https://github.com/phonegap/phonegap-plugin-push.git"
+    "cordova-plugin-x-socialsharing": "git+https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git",
+    "es6-promise-plugin": "^4.1.0",
+    "phonegap-plugin-push": "^2.1.2"
   }
 }

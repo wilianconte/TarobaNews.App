@@ -1261,3 +1261,9 @@ a.tapped {
         margin-right: -4px;
     }
 }
+
+.fild-share
+{
+    padding-right: 15px;
+}
+.fild-share i {color: white; }

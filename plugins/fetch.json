@@ -119,7 +119,31 @@
   "phonegap-plugin-push": {
     "source": {
       "type": "registry",
-      "id": "https://github.com/phonegap/phonegap-plugin-push"
+      "id": "phonegap-plugin-push@latest"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-x-socialsharing": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "es6-promise-plugin": {
+    "source": {
+      "type": "registry",
+      "id": "es6-promise-plugin@4.1.0"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "cordova-plugin-statusbar": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-statusbar@2.3.0"
     },
     "is_top_level": true,
     "variables": {}

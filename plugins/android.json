@@ -49,7 +49,17 @@
     "phonegap-plugin-push": {
       "FCM_VERSION": "11.0.1",
       "PACKAGE_NAME": "com.tarobanews.app"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "PACKAGE_NAME": "com.tarobanews.app"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.tarobanews.app"
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.tarobanews.app"
+    }
+  }
 }

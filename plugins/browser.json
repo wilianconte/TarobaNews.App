@@ -48,10 +48,19 @@
     },
     "phonegap-plugin-push": {
       "PACKAGE_NAME": "com.tarobanews.app"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "PACKAGE_NAME": "com.tarobanews.app"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.tarobanews.app"
     }
   },
   "dependent_plugins": {
     "cordova-plugin-compat": {
+      "PACKAGE_NAME": "com.tarobanews.app"
+    },
+    "es6-promise-plugin": {
       "PACKAGE_NAME": "com.tarobanews.app"
     }
   }

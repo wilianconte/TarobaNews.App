@@ -36,6 +36,8 @@
         <splash density="port-xxxhdpi" src="www/res/screen/android/drawable-port-xxxhdpi-screen.png" />
     </platform>
     <platform name="ios">
+        <preference name="StatusBarOverlaysWebView" value="false" />
+        <preference name="StatusBarBackgroundColor" value="#297ACC" />
         <resource-file src="GoogleService-Info.plist" />
         <icon height="57" platform="ios" src="www/res/icon/ios/icon.png" width="57" />
         <icon height="114" platform="ios" src="www/res/icon/ios/icon@2x.png" width="114" />
@@ -122,5 +124,10 @@
         <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="Need acces to your library" />
     </plugin>
     <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
-    <plugin name="phonegap-plugin-push" spec="git+https://github.com/phonegap/phonegap-plugin-push.git" />
+    <plugin name="phonegap-plugin-push" spec="^2.1.2">
+        <variable name="FCM_VERSION" value="11.0.1" />
+    </plugin>
+    <plugin name="cordova-plugin-x-socialsharing" spec="git+https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git" />
+    <plugin name="cordova-plugin-statusbar" spec="^2.3.0" />
+    <engine name="ios" spec="~4.5.4" />
 </widget>

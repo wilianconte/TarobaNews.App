@@ -35,14 +35,14 @@ function OpenLoad() {
 //---------------------------------------------------------------------------
 
 function CloseLoad() {
-    
-      setTimeout(function () {
+
+    setTimeout(function () {
         $('.box-load').fadeOut("slow", function () {
-          // Animation complete.
+            // Animation complete.
         });
-      }, 2000);
-    }
-    
+    }, 2000);
+}
+
 //---------------------------------------------------------------------------
 
 function SetTapEffect() {
@@ -72,7 +72,7 @@ function SetSearch() {
 
     $(".trigger-search").on('click', function (e) {
 
-        window.location =  'search.html?q=' + $(".fild-search").val();
+        window.location = 'search.html?q=' + $(".fild-search").val();
 
     });
 }
@@ -80,36 +80,36 @@ function SetSearch() {
 //---------------------------------------------------------------------------  
 
 function SetOpenList() {
-    
-      $('body').on('click','.link-menu, .fild-hat, .fild-blog', function(e)
-      {
+
+    $('body').on('click', '.link-menu, .fild-hat, .fild-blog', function (e) {
+        
         e.preventDefault();
-    
+
         var type = $(this).data('type');
         var editorial = $(this).data('editorial');
         var url = $(this).data('url');
-    
-        var www = 'list.html?type=' + type;
-    
-        if(editorial != null)
-          www += '&editorial=' + editorial;
-    
-        if(url != null)
-          www += '&url=' + url;
-      
-        window.location =  www;
-    
-      });
 
-      $('body').on('click', '.link-blogs', function (e) {
-        
-            e.preventDefault();
-        
-            window.location = 'blogs.html';
-        
-          });
-      
-  }
-  
+        var www = 'list.html?type=' + type;
+
+        if (editorial != null)
+            www += '&editorial=' + editorial;
+
+        if (url != null)
+            www += '&url=' + url;
+
+        window.location = www;
+
+    });
+
+    $('body').on('click', '.link-blogs', function (e) {
+
+        e.preventDefault();
+
+        window.location = 'blogs.html';
+
+    });
+
+}
+
  //---------------------------------------------------------------------------   
 
