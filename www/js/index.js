@@ -40,7 +40,7 @@ function SetHome(homeId, showLoad) {
   var jqxhr = $.get(baseUrl + "/home/get/" + homeId).done(function (data, status) {
 
     var content = $('.feeds-highlights');
-    
+
     content.empty();
 
     //Highlights
@@ -65,7 +65,7 @@ function SetHome(homeId, showLoad) {
         model.clone().removeClass("hidden feed-model")
 
       //Caso seja do típo video
-      if(element.DestaqueId == 2)
+      if (element.DestaqueId == 2)
         feed.find(".fild-icon-video").show();
 
       feed.find(".fild-img").attr("src", element.Img);
@@ -192,8 +192,8 @@ function LoadBlogs(homeId) {
       }
 
       feed.find(".fild-img").attr("src", element.Img).addClass('center-block');
-      feed.find(".fild-blog").data('type','blog');
-      feed.find(".fild-blog").data('url',element.Url);      
+      feed.find(".fild-blog").data('type', 'blog');
+      feed.find(".fild-blog").data('url', element.Url);
       feed.find(".fild-titulo").text(element.Titulo);
       feed.find(".fild-news-url").attr("href", 'news.html?url=' + element.NoticiaUrl);
       feed.find(".fild-news-titulo").text(element.NoticiaTitulo);
@@ -232,36 +232,35 @@ function LoadBlogs(homeId) {
 //APP
 var app = {
 
-    initialize: function () {
-    
-      document.addEventListener('deviceready', this.onDeviceReady, false);
-      document.addEventListener("online", this.onDeviceOnline, false);
-      document.addEventListener("offline", this.onDeviceOffline, false);
-      document.addEventListener("pause", this.onPause, false);
-      document.addEventListener("resume", this.onResume, false);
-  },
-  onDeviceReady : function ()
-  {
-      SetTapEffect();
-    
-      SetLinkHome();
-  
-      SetSearch();
-  
-      SetOpenList();
-  
-      SetHome(null, false);
-  
-      CloseLoad();
-  
-      //Load
-      menuItem = new mlPushMenu(document.getElementById('mp-menu'), document.getElementById('trigger'), {
-        type: 'cover'
-      });
+  initialize: function () {
 
-      if(device.platform != 'browser')
-        fcm.initialize();
-          
+    document.addEventListener('deviceready', this.onDeviceReady, false);
+    document.addEventListener("online", this.onDeviceOnline, false);
+    document.addEventListener("offline", this.onDeviceOffline, false);
+    document.addEventListener("pause", this.onPause, false);
+    document.addEventListener("resume", this.onResume, false);
+  },
+  onDeviceReady: function () {
+
+    if (device.platform != 'browser')
+      fcm.initialize();
+
+    SetTapEffect();
+
+    SetLinkHome();
+
+    SetSearch();
+
+    SetOpenList();
+
+    SetHome(null, false);
+
+    CloseLoad();
+
+    //Load
+    menuItem = new mlPushMenu(document.getElementById('mp-menu'), document.getElementById('trigger'), {
+      type: 'cover'
+    });
   },
   onDeviceOnline: function () {
     //alert('On!');
@@ -269,85 +268,10 @@ var app = {
   onDeviceOffline: function () {
     //alert('Off!');
   },
-  onPause : function(){
+  onPause: function () {
     //alert('pause!');
   },
-  onResume : function(){
+  onResume: function () {
     //alert('resume!');
   }
 };
-
-//FMC
-var push = {};
-var fcm = {
-
-  initialize: function () {
-
-    //alert('init');
-
-    push = PushNotification.init({
-      "android": {
-        "icon": "tarobanews",
-        "iconColor": "#297acc",
-        "senderID" :  "392380799521",
-        "sound" : true,
-        "vibrate" : true,
-        "forceShow": true
-      },
-      "ios": {
-        "sound": true,
-        "alert": true,
-        "badge": true
-      },
-      "windows": {}
-    });
-
-    push.on('registration', function (data) {
-
-      var oldRegId = localStorage.getItem('registrationId');
-        
-      if (oldRegId !== data.registrationId) {
-        
-        // Save new registration ID
-        localStorage.setItem('registrationId', data.registrationId);
-
-        // Subscribe
-        fcm.Sub('news-ios')
-
-      }
-    });
-
-    push.on('notification', function (data) {
-
-      navigator.notification.alert(
-        data.message,         // message
-        null,                 // callback
-        data.title,           // title
-        'Ok'                  // buttonName
-      );
-
-    });
-
-    push.on('error', function (e) {
-      //alert('push error:' + e.message);
-    });
-  },
-  Sub : function (topic)
-  {
-    push.subscribe(topic, function () { 
-      //alert(topic  + ' sucesso!')
-    },
-    function (e) {
-      //alert('subscribe error:' + e);
-    });
-
-  },
-  UnSub : function (topic)
-  {
-    push.unsubscribe(topic, () => {
-      //alert(topic  + ' sucesso!')      
-    }, (e) => {
-      //alert('unsubscribe error:' + e);
-    });
-  }
-}

@@ -69,12 +69,16 @@ a {
     cursor: pointer;
 }
 
-
-.troca-lupa{
-    margin-right: 15px;
+.lupa{
+    padding-right: 15px;
+    
 }
 
-
+.fild-share
+{
+    padding-right: 15px;
+}
+.fild-share i {color: white; }
 
 /*------------------------------------*/
 
@@ -1261,9 +1265,3 @@ a.tapped {
         margin-right: -4px;
     }
 }
-
-.fild-share
-{
-    padding-right: 15px;
-}
-.fild-share i {color: white; }

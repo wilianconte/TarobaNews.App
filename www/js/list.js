@@ -52,7 +52,7 @@ function LoadOpenList(type, editorial, url) {
         var feed = model.clone().removeClass("hidden feed-model-img");
 
         //Fix image empy
-        if(element.DestaqueId != 0 && element.Img != 'http://cdn.tarobanews.com/uploads/noticias/')
+        if (element.DestaqueId != 0 && element.Img != 'http://cdn.tarobanews.com/uploads/noticias/')
           feed = model_img.clone().removeClass("hidden feed-model");
 
         var type = 'category';
@@ -103,6 +103,12 @@ function LoadList() {
 //APP
 var app = {
   initialize: function () {
+    document.addEventListener('deviceready', this.onDeviceReady, false);
+  },
+  onDeviceReady: function () {
+
+    if (device.platform != 'browser')
+      fcm.initialize();
 
     SetSearch();
 

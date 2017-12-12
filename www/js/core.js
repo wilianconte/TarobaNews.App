@@ -1,7 +1,72 @@
 //Base Url
 var baseUrl = "http://api.tarobanews.com";
-
 var menuItem;
+
+//FMC
+var push = {};
+var fcm = {
+
+  initialize: function () {
+
+    push = PushNotification.init({
+      "android": {
+        "icon": "tarobanews",
+        "iconColor": "#297acc",
+        "senderID": "392380799521",
+        "sound": true,
+        "vibrate": true,
+        "forceShow": true
+      },
+      "ios": {
+        "sound": true,
+        "alert": true,
+        "badge": true
+      },
+      "windows": {}
+    });
+
+    push.on('registration', function (data) {
+
+      var oldRegId = localStorage.getItem('registrationId');
+
+      if (oldRegId !== data.registrationId) {
+
+        // Save new registration ID
+        localStorage.setItem('registrationId', data.registrationId);
+
+        // Subscribe
+        fcm.Sub('news')
+
+      }
+    });
+
+    push.on('notification', function (data) {
+
+      if (data.additionalData)
+        if (!data.additionalData.foreground)
+          window.location = 'news.html?url=' + data.additionalData.url;
+    });
+
+    push.on('error', function (e) {
+      //alert('push error:' + e.message);
+    });
+  },
+  Sub: function (topic) {
+    push.subscribe(topic, function () {
+      //alert(topic + ' sucesso!')
+    },
+      function (e) {
+        //alert('subscribe error:' + e);
+      });
+  },
+  UnSub: function (topic) {
+    push.unsubscribe(topic, () => {
+      //alert(topic + ' sucesso!')
+    }, (e) => {
+      //alert('unsubscribe error:' + e);
+    });
+  }
+}
 //---------------------------------------------------------------------------
 
 function getParameter(sParam) {
@@ -82,7 +147,7 @@ function SetSearch() {
 function SetOpenList() {
 
     $('body').on('click', '.link-menu, .fild-hat, .fild-blog', function (e) {
-        
+
         e.preventDefault();
 
         var type = $(this).data('type');

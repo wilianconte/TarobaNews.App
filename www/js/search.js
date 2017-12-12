@@ -1,7 +1,6 @@
-function LoadSearch()
-{
+function LoadSearch() {
     //Recupera campo de pesquisa
-    var query = getParameter('q'); 
+    var query = getParameter('q');
 
     //Efetua a busa por dados na API
     var jqxhr = $.get(baseUrl + "/news/getnewsbysearch/" + query)
@@ -51,7 +50,7 @@ function LoadSearch()
         })
         .always(function () {
             CloseLoad();
-        });  
+        });
 }
 
 //---------------------------------------------------------------------------
@@ -59,21 +58,26 @@ function LoadSearch()
 //APP
 var app = {
 
-  initialize: function () {
-  
-    SetSearch();
+    initialize: function () {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+    },
+    onDeviceReady: function () {
 
-    SetOpenList();
+        if (device.platform != 'browser')
+            fcm.initialize();
 
-    LoadSearch();
+        SetSearch();
 
-    CloseLoad();
+        SetOpenList();
 
-    //Load
-    menuItem = new mlPushMenu(document.getElementById('mp-menu'), document.getElementById('trigger'), {
-      type: 'cover'
-    });
+        LoadSearch();
 
-  }
+        CloseLoad();
+
+        //Load
+        menuItem = new mlPushMenu(document.getElementById('mp-menu'), document.getElementById('trigger'), {
+            type: 'cover'
+        });
+
+    }
 };
-

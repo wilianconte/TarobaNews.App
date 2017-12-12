@@ -55,6 +55,9 @@
     },
     "cordova-plugin-statusbar": {
       "PACKAGE_NAME": "com.tarobanews.app"
+    },
+    "phonegap-plugin-local-notification": {
+      "PACKAGE_NAME": "com.tarobanews.app"
     }
   },
   "dependent_plugins": {
