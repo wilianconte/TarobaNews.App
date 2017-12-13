@@ -13,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/side-menu.css">
 	<link rel="stylesheet" type="text/css" href="css/slider-blog.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/ninja-slider.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
@@ -40,8 +41,11 @@
 				<a class="logo-topo" href="index.html">
 					<img src="img/logo-taroba-topo-branca.svg" width="180px">
 				</a>
-				<a class="lupa">
+				<a class="fild-lupa">
 					<img src="img/lupa1.svg" width="40px">
+				</a>
+				<a class="fild-share" href="#" hidden>
+					<i class="fa fa-share-alt fa-2x" aria-hidden="true"></i>
 				</a>
 			</div>
 			<div class="barra-estado">
@@ -258,8 +262,26 @@
 			</div>
 		</div>
 
-		<!-- <input type="button" value="Sub" onclick="javascript:fcm.Sub();" />
-			<input type="button" value="NotSub" onclick="javascript:fcm.UnSub();" /> -->
+		<!-- Blog / List -->
+		<div class="hidden feed-model-blogs feed-post">
+			<div class="imagem-autor">
+				<a class="fild-blog" href="#">
+					<img class="fild-img">
+				</a>
+			</div>
+			<div class="feed-post-header-blog">
+				<div class="nome-autor">
+					<a class="fild-blog" href="#">
+						<p class="fild-titulo">Título do Blog</p>
+					</a>
+				</div>
+				<div class="resumo-autor">
+					<a class="fild-news-url" href="#">
+						<p class="fild-news-titulo">Os desafios da alimentação</p>
+					</a>
+				</div>
+			</div>
+		</div>
 
 		<!-- Página Home -->
 		<div id="pg-home" class="page">
@@ -349,6 +371,93 @@
 			</div>
 		</div>
 
+		<!-- Página Blogs -->
+		<div id="pg-blogs" class="page feed-post" hidden>
+		</div>
+
+		<!-- Página Lista -->
+		<div id="pg-list" class="page" hidden>
+		</div>
+		<a id="btn-veja-mais" href="#" class="botao-veja-mais-rodape" hidden>
+			<p>Veja mais</p>
+		</a>
+
+		<!--Inicio da Galeria-->
+		<div style="display:none;">
+			<div id="ninja-slider">
+				<div class="slider-inner">
+					<ul>
+					</ul>
+					<div id="fsBtn" class="fs-icon" title="Expand/Close"></div>
+				</div>
+			</div>
+		</div>
+		<div class="bloco-galeria" hidden>
+			<div class="gallery">
+				<img class="icone-galeria" src="img/icone-galeria.png">
+				<img class="fild-img-gallery" src="img/img1.jpg" onclick="lightbox(0)" />
+			</div>
+		</div>
+		<!--Fim da Galeria-->
+
+		<!--Página Notícias -->
+		<div id="pg-news" class="page bloco-single" hidden>
+
+			<div class="bloco-single-titulo">
+				<p class="fild-titulo">Título</p>
+			</div>
+
+			<br>
+
+			<!-- Destaques -->
+			<div class="bloco-single-video" hidden>
+				<embed class="fild-video" width="100%"  src="#" frameborder="0" gesture="media" allowfullscreen></iframe>
+			</div>
+			<div class="bloco-single-img" hidden>
+				<img class="fild-news-img" src="#">
+			</div>
+			<!-- Destaques -->
+
+			<br>
+			<div class="bloco-single-data">
+				<p class="fild-published">25 de outubro de 2017</p>
+			</div>
+			<hr>
+			<div class="fild-conteudo bloco-single-noticia">
+				Conteúdo
+			</div>
+			<!-- <hr>
+			<div class="redes-sociais">
+				<ul>
+					<li>
+						<a class="fild-facebook" href="#" target="_blank">
+							<i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+						</a>
+					</li>
+					<li>
+						<a class="fild-twitter" href="#" target="_blank">
+							<i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+						</a>
+					</li>
+					<li>
+						<a class="fild-google-plus" href="#" target="_blank">
+							<i class="fa fa-google-plus fa-2x" aria-hidden="true"></i>
+						</a>
+					</li>
+					<li>
+						<a class="fild-whatsapp" href="#" target="_blank">
+							<i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i>
+						</a>						
+					</li>
+					<li>
+						<a class="fild-share" href="#">
+							<i class="fa fa-share fa-2x" aria-hidden="true"></i>
+						</a>						
+					</li>
+				</ul>
+			</div> -->
+		</div>
+
 		<!-- Search Modal -->
 		<div class="box-pesquisa" hidden>
 			<div class="pesquisa-full">
@@ -394,15 +503,39 @@
 		<script type="text/javascript" src="js/bootstrap.js"></script>
 		<script type="text/javascript" src="js/classie.js"></script>
 		<script type="text/javascript" src="js/mlpushmenu.js"></script>
+		<script type="text/javascript" src="js/ninja-slider.js"></script>
 
 		<!-- Custon -->
-		<script src="js/core.js"></script>
 		<script src="js/index.js"></script>
 
 		<script>
-			//Load
 			app.initialize();
+
+			function lightbox(idx) {
+				//Show the slider wrapper
+				var ninjaSldr = document.getElementById("ninja-slider");
+				ninjaSldr.parentNode.style.display = "block";
+
+				//Then init the slider
+				//Note: The { initSliderByCallingInitFunc: true } option in the 
+				// ninja-slider.js tells the page not to initiate the slider
+				// unless the following init(idx) function is called.
+				nslider.init(idx);
+
+				//Then mimic clicking the fullscreen button to popup the modal
+				var fsBtn = document.getElementById("fsBtn");
+				fsBtn.click();
+			}
+
+			function fsIconClick(isFullscreen) {
+				//Note: fsIconClick is the default event handler of the fullscreen button
+				if (isFullscreen) {
+					var ninjaSldr = document.getElementById("ninja-slider");
+					ninjaSldr.parentNode.style.display = "none";
+				}
+			}
 		</script>
+
 	</div>
 </body>
 

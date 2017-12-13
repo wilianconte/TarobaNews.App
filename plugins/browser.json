@@ -40,22 +40,22 @@
     "cordova-plugin-network-information": {
       "PACKAGE_NAME": "com.tarobanews.app"
     },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.tarobanews.app"
+    },
     "cordova-plugin-vibration": {
       "PACKAGE_NAME": "com.tarobanews.app"
     },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.tarobanews.app"
     },
-    "phonegap-plugin-push": {
-      "PACKAGE_NAME": "com.tarobanews.app"
-    },
     "cordova-plugin-x-socialsharing": {
       "PACKAGE_NAME": "com.tarobanews.app"
     },
-    "cordova-plugin-statusbar": {
+    "phonegap-plugin-local-notification": {
       "PACKAGE_NAME": "com.tarobanews.app"
     },
-    "phonegap-plugin-local-notification": {
+    "phonegap-plugin-push": {
       "PACKAGE_NAME": "com.tarobanews.app"
     }
   },

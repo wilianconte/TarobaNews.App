@@ -4,9 +4,8 @@
   "displayName": "Tarobá News",
   "cordova": {
     "platforms": [
-      "browser",
       "android",
-      "ios"
+      "browser"
     ],
     "plugins": {
       "cordova-plugin-battery-status": {},
@@ -40,7 +39,6 @@
     "cordova-android": "^6.3.0",
     "cordova-browser": "^5.0.1",
     "cordova-cli": "^1.0.0",
-    "cordova-ios": "^4.5.4",
     "cordova-plugin-battery-status": "~1.2.4",
     "cordova-plugin-camera": "~2.4.1",
     "cordova-plugin-device": "~1.1.6",
