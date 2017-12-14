@@ -55,6 +55,9 @@
     "phonegap-plugin-push": {
       "FCM_VERSION": "11.0.1",
       "PACKAGE_NAME": "com.tarobanews.app"
+    },
+    "cordova-plugin-fcm": {
+      "PACKAGE_NAME": "com.tarobanews.app"
     }
   },
   "dependent_plugins": {

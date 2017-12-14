@@ -1059,7 +1059,10 @@ a {
     position: fixed; /* Stay in place */
     top: 0;
     width: 100%;
+    min-height: 500px;
     height: 100%;
+    z-index: 999;
+    overflow: auto; /* Enable scroll if needed */
 }
 
 

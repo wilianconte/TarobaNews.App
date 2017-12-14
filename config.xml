@@ -72,4 +72,5 @@
     </plugin>
     <plugin name="cordova-plugin-x-socialsharing" spec="git+https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git" />
     <plugin name="phonegap-plugin-local-notification" spec="^1.0.1" />
+    <plugin name="cordova-plugin-fcm" spec="^2.1.2" />
 </widget>

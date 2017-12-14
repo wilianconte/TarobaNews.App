@@ -410,9 +410,10 @@
 			<br>
 
 			<!-- Destaques -->
-			<div class="bloco-single-video" hidden>
+			<div class="bloco-single-video">
 			</div>
-			<div class="bloco-single-img" hidden>
+
+			<div class="bloco-single-img">
 				<img class="fild-news-img" src="#">
 			</div>
 			<!-- Destaques -->
@@ -463,33 +464,6 @@
 			</div>
 		</div>
 
-		<!-- Search Modal -->
-		<div class="box-pesquisa" hidden>
-			<div class="pesquisa-full">
-				<i class="fa fa-close fa-2x botao-fechar"></i>
-				<div class="grupo">
-					<div class="campo-digite">
-						<input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="fild-search" placeholder="Digite sua pesquisa...">
-					</div>
-
-					<a href="#" class="trigger-search botao-pesquisar">
-						<img src="img/lupa.svg">
-						<p>Pesquisar</p>
-					</a>
-				</div>
-			</div>
-		</div>
-
-		<!-- Load Modal -->
-		<div class="box-load">
-			<div class="pesquisa-full">
-				<img src="img/logo-taroba-topo-branca.svg" width="75%">
-				<br>
-				<br>
-				<img src="img/load.svg">
-			</div>
-		</div>
-
 		<!-- Footer -->
 		<footer>
 			<div class="grupo-footer">
@@ -499,50 +473,79 @@
 			</div>
 		</footer>
 
-		<!-- Cordova -->
-		<script type="text/javascript" src="cordova.js"></script>
-
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/side-menu.js"></script>
-		<script type="text/javascript" src="js/bootstrap.js"></script>
-		<script type="text/javascript" src="js/classie.js"></script>
-		<script type="text/javascript" src="js/mlpushmenu.js"></script>
-		<script type="text/javascript" src="js/ninja-slider.js"></script>
-
-		<!-- Custon -->
-		<script src="js/index.js"></script>
-
-		<script>
-
-			app.initialize();
-
-			function lightbox(idx) {
-				//Show the slider wrapper
-				var ninjaSldr = document.getElementById("ninja-slider");
-				ninjaSldr.parentNode.style.display = "block";
-
-				//Then init the slider
-				//Note: The { initSliderByCallingInitFunc: true } option in the 
-				// ninja-slider.js tells the page not to initiate the slider
-				// unless the following init(idx) function is called.
-				nslider.init(idx);
-
-				//Then mimic clicking the fullscreen button to popup the modal
-				var fsBtn = document.getElementById("fsBtn");
-				fsBtn.click();
-			}
-
-			function fsIconClick(isFullscreen) {
-				//Note: fsIconClick is the default event handler of the fullscreen button
-				if (isFullscreen) {
-					var ninjaSldr = document.getElementById("ninja-slider");
-					ninjaSldr.parentNode.style.display = "none";
-				}
-			}
-		</script>
-
 	</div>
+
+	<!-- Search Modal -->
+	<div class="box-pesquisa" hidden>
+		<div class="pesquisa-full">
+			<i class="fa fa-close fa-2x botao-fechar"></i>
+			<div class="grupo">
+				<div class="campo-digite">
+					<input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="fild-search" placeholder="Digite sua pesquisa...">
+				</div>
+
+				<a href="#" class="trigger-search botao-pesquisar">
+					<img src="img/lupa.svg">
+					<p>Pesquisar</p>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Load Modal -->
+	<div class="box-load">
+		<div class="pesquisa-full">
+			<img src="img/logo-taroba-topo-branca.svg" width="300px">
+			<br>
+			<br>
+			<img src="img/load.svg">
+		</div>
+	</div>
+
+	<!-- Cordova -->
+	<script type="text/javascript" src="cordova.js"></script>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/side-menu.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/classie.js"></script>
+	<script type="text/javascript" src="js/mlpushmenu.js"></script>
+	<script type="text/javascript" src="js/ninja-slider.js"></script>
+
+	<!-- Custon -->
+	<script src="js/index.js"></script>
+
+	<script>
+
+		app.initialize();
+
+		function lightbox(idx) {
+			//Show the slider wrapper
+			var ninjaSldr = document.getElementById("ninja-slider");
+			ninjaSldr.parentNode.style.display = "block";
+
+			//Then init the slider
+			//Note: The { initSliderByCallingInitFunc: true } option in the 
+			// ninja-slider.js tells the page not to initiate the slider
+			// unless the following init(idx) function is called.
+			nslider.init(idx);
+
+			//Then mimic clicking the fullscreen button to popup the modal
+			var fsBtn = document.getElementById("fsBtn");
+			fsBtn.click();
+		}
+
+		function fsIconClick(isFullscreen) {
+			//Note: fsIconClick is the default event handler of the fullscreen button
+			if (isFullscreen) {
+				var ninjaSldr = document.getElementById("ninja-slider");
+				ninjaSldr.parentNode.style.display = "none";
+			}
+		}
+	</script>
+
+
 </body>
 
 </html>
