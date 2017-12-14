@@ -18,7 +18,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="css/icons.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="css/icons.css" /> -->
 	<link rel="stylesheet" type="text/css" href="css/component.css" />
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -32,13 +32,12 @@
 </head>
 
 <body>
-
 	<div class="mp-pusher" id="mp-pusher">
 
 		<header>
 			<div class="barra-topo">
 				<img href="#" id="trigger" class="menu-trigger" src="img/menu-hamb.svg" width="24px">
-				<a class="logo-topo" href="index.html">
+				<a class="link-go-home logo-topo" href="#">
 					<img src="img/logo-taroba-topo-branca.svg" width="180px">
 				</a>
 				<a class="fild-lupa">
@@ -377,10 +376,13 @@
 
 		<!-- Página Lista -->
 		<div id="pg-list" class="page" hidden>
+			<div class="feed-pg-list">
+
+			</div>
+			<a id="btn-veja-mais" href="#" class="botao-veja-mais-rodape">
+				<p>Veja mais</p>
+			</a>
 		</div>
-		<a id="btn-veja-mais" href="#" class="botao-veja-mais-rodape" hidden>
-			<p>Veja mais</p>
-		</a>
 
 		<!--Inicio da Galeria-->
 		<div style="display:none;">
@@ -395,7 +397,7 @@
 		<div class="bloco-galeria" hidden>
 			<div class="gallery">
 				<img class="icone-galeria" src="img/icone-galeria.png">
-				<img class="fild-img-gallery" src="img/img1.jpg" onclick="lightbox(0)" />
+				<img class="fild-img-gallery" src="#" onclick="lightbox(0)" />
 			</div>
 		</div>
 		<!--Fim da Galeria-->
@@ -406,12 +408,10 @@
 			<div class="bloco-single-titulo">
 				<p class="fild-titulo">Título</p>
 			</div>
-
 			<br>
 
 			<!-- Destaques -->
 			<div class="bloco-single-video" hidden>
-				<embed class="fild-video" width="100%"  src="#" frameborder="0" gesture="media" allowfullscreen></iframe>
 			</div>
 			<div class="bloco-single-img" hidden>
 				<img class="fild-news-img" src="#">
@@ -458,6 +458,12 @@
 			</div> -->
 		</div>
 
+		<!--Página Busca -->
+		<div id="pg-search" class="page">
+			<div class="feeds-search">
+			</div>
+		</div>
+
 		<!-- Search Modal -->
 		<div class="box-pesquisa" hidden>
 			<div class="pesquisa-full">
@@ -488,7 +494,7 @@
 		<!-- Footer -->
 		<footer>
 			<div class="grupo-footer">
-				<a href="index.html">
+				<a class="link-go-home" href="#">
 					<img src="img/logo-taroba-colorida.svg">
 				</a>
 			</div>
@@ -509,6 +515,7 @@
 		<script src="js/index.js"></script>
 
 		<script>
+
 			app.initialize();
 
 			function lightbox(idx) {

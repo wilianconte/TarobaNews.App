@@ -100,7 +100,6 @@ function OpenLoad() {
   $('.page').hide();
   $('.barra-estado').hide();
   $('.barra-titulo-editorial').hide();
-  $('.botao-veja-mais-rodape').hide();
   $('.fild-img-gallery').hide();
   $('.fild-lupa').hide();
   $('.fild-share').hide();
@@ -136,7 +135,7 @@ function SetTapEffect() {
 
 function SetSearch() {
 
-  $(".lupa").on("click", function (e) {
+  $(".fild-lupa").on("click", function (e) {
     e.preventDefault();
     $(".box-pesquisa").show();
     $(".fild-search").focus();
@@ -149,7 +148,19 @@ function SetSearch() {
 
   $(".trigger-search").on('click', function (e) {
 
-    window.location = 'search.html?q=' + $(".fild-search").val();
+    e.preventDefault();
+
+    var query = $(".fild-search").val();
+
+    $(".fild-search").val('');
+
+    $(".box-pesquisa").hide();
+
+    LoadSearchPage(query);
+
+    mypah.push({ page: 'search', query : query  });
+
+    history.pushState(null, null, '/busca?q=' + query);
 
   });
 }
@@ -157,8 +168,6 @@ function SetSearch() {
 //---------------------------------------------------------------------------  
 
 function SetOpenList() {
-
-  console.log('SetOpenList');
 
   $('body').on('click', '.link-blogs', function (e) {
 
@@ -223,12 +232,22 @@ function SetOpenList() {
 //---------------------------------------------------------------------------
 
 function SetLinkHome() {
+
+  $('.link-go-home').on('touchend', function (e) {
+
+    e.preventDefault();
+
+    var length = history.length;
+    history.go(-length);
+
+    history.replaceState(null, null, '/')
+    mypah = [{ page: 'home' }];
+    SetHome(null, true);
+  });
+
   $('.link-home').on('touchend', function () {
-
     var homeId = $(this).data('home');
-
     SetHome(homeId, true);
-
   });
 }
 
@@ -408,6 +427,7 @@ function SetHome(homeId, showLoad) {
     })
     .always(function () {
       CloseLoad(function () {
+        $('.fild-lupa').show();
         $('.barra-estado').show();
         $('#pg-home').show();
       });
@@ -513,6 +533,7 @@ function LoadBlogsPage() {
     })
     .always(function () {
       CloseLoad(function () {
+        $('.fild-lupa').show();
         $('.barra-titulo-editorial').show();
         $('#pg-blogs').show();
       });
@@ -523,15 +544,17 @@ function LoadBlogsPage() {
 
 function SetLoadMore() {
 
-  $('body').on('click', '#btn-veja-mais', function () {
+  $('body').on('click', '#btn-veja-mais', function (e) {
 
-    OpenLoad();
+    e.preventDefault();
 
     page = page + 1;
 
-    var type = getParameter('type');
-    var editorial = getParameter('editorial');
-    var url = getParameter('url');
+    var last = mypah[mypah.length - 1];
+
+    var type = last.type;
+    var editorial = last.editorial;
+    var url = last.url;
 
     LoadListPage(type, editorial, url);
 
@@ -558,7 +581,7 @@ function LoadListPage(type, editorial, url) {
   var jqxhr = $.get(www)
     .done(function (data, status) {
 
-      var content = $('#pg-list');
+      var content = $('#pg-list .feed-pg-list');
 
       content.empty();
 
@@ -567,7 +590,9 @@ function LoadListPage(type, editorial, url) {
 
       $(".fild-page-title").text(data.Titulo);
 
-      if (data.News.length >= 21)
+      if (data.News.length < 21)
+        $('#btn-veja-mais').hide();
+      else
         $('#btn-veja-mais').show();
 
       for (let element of data.News) {
@@ -611,6 +636,7 @@ function LoadListPage(type, editorial, url) {
     })
     .always(function () {
       CloseLoad(function () {
+        $('.fild-lupa').show();
         $('.barra-titulo-editorial').show();
         $('#pg-list').show();
       });
@@ -620,7 +646,6 @@ function LoadListPage(type, editorial, url) {
 //---------------------------------------------------------------------------
 
 function LoadNewsPage(url) {
-
 
   OpenLoad();
 
@@ -637,8 +662,10 @@ function LoadNewsPage(url) {
 
       if (data.DestaqueId == 2) {
         $('.bloco-single-img').hide();
+        
+        $('.bloco-single-video').html("<iframe class='fild-video' width='100%' src='" + data.VideoUrl + "' frameborder='0' gesture='media' allowfullscreen></iframe>");
         $('.bloco-single-video').show();
-        $('.fild-video').attr("src", data.VideoUrl);
+        //$('.fild-video').attr("src", data.VideoUrl);
       }
       else if (data.DestaqueId == 3) {
         $('.bloco-single-img').hide();
@@ -716,12 +743,71 @@ function Share() {
 
 //---------------------------------------------------------------------------
 
+function LoadSearchPage(query) {
+
+  OpenLoad();
+
+  $(".fild-page-title").text('Busca: ' + query);
+
+  //Efetua a busa por dados na API
+  var jqxhr = $.get(baseUrl + "/news/getnewsbysearch/" + query)
+    .done(function (data, status) {
+
+      //Recupera o container de pesquisa
+      var content = $('.feeds-search');
+
+      //Limpa container com os resultados da pesquisa
+      content.empty();
+
+      $(data.News).each(function (index, element) {
+
+        var type = 'category';
+        var hat = element.Categoria
+        var hatUrl = element.CategoryUrl
+
+        if (element.BlogUrl != null) {
+          type = 'blog';
+          hat = element.Blog;
+          hatUrl = element.BlogUrl;
+        }
+
+        var model = $('.feed-model');
+        var model_img = $('.feed-model-img');
+
+        var feed = element.DestaqueId != 0 ?
+          model_img.clone().removeClass("hidden feed-model-img") :
+          model.clone().removeClass("hidden feed-model");
+
+        feed.find(".fild-img").attr("src", element.Img);
+        feed.find(".fild-news-url").attr("href", 'news.html?url=' + element.Url);
+        feed.find(".fild-news-titulo").text(element.Titulo);
+        feed.find(".fild-hat").attr('data-type', type);
+        feed.find(".fild-hat").attr('data-editorial', element.EditorialUrl);
+        feed.find(".fild-hat").attr('data-url', hatUrl);
+        feed.find(".fild-hat").text(hat).addClass("sublinhado-" + element.EditorialUrl);;
+        feed.find(".fild-published").text(element.Published);
+
+        content.append(feed);
+
+      });
+
+    })
+    .fail(function () {
+      alert("Não foi possível carregar os dados!");
+    })
+    .always(function () {
+      CloseLoad(function () {
+        $('.fild-lupa').show();
+        $('.barra-titulo-editorial').show();
+        $('#pg-search').show();
+      });
+    });
+}
+
 //APP
 var app = {
 
   initialize: function () {
-
-    console.log('initialize');
 
     document.addEventListener('deviceready', this.onDeviceReady, false);
     document.addEventListener("online", this.onDeviceOnline, false);
@@ -748,6 +834,7 @@ var app = {
           {
             OpenLoad();
             CloseLoad(function () {
+              $('.fild-lupa').show();
               $('.barra-estado').show();
               $('#pg-home').show();
             });
@@ -758,12 +845,15 @@ var app = {
             LoadBlogsPage();
             break;
           }
+          case 'search':
+          {
+            LoadSearchPage(last.query);
+            break;
+          }
       }
     };
   },
   onDeviceReady: function () {
-
-    console.log('onDeviceReady');
 
     if (device.platform != 'browser')
       fcm.initialize();
@@ -785,7 +875,6 @@ var app = {
       Share();
 
     });
-
 
     SetHome(null, false);
 

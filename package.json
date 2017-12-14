@@ -4,8 +4,8 @@
   "displayName": "Tarobá News",
   "cordova": {
     "platforms": [
-      "android",
-      "browser"
+      "browser",
+      "android"
     ],
     "plugins": {
       "cordova-plugin-battery-status": {},
@@ -30,7 +30,6 @@
         "FCM_VERSION": "11.0.1"
       },
       "cordova-plugin-x-socialsharing": {},
-      "cordova-plugin-statusbar": {},
       "phonegap-plugin-local-notification": {}
     }
   },
@@ -50,7 +49,6 @@
     "cordova-plugin-ios-camera-permissions": "~1.2.0",
     "cordova-plugin-media-capture": "~1.4.3",
     "cordova-plugin-network-information": "~1.3.3",
-    "cordova-plugin-statusbar": "^2.3.0",
     "cordova-plugin-vibration": "~2.1.5",
     "cordova-plugin-whitelist": "^1.3.3",
     "cordova-plugin-x-socialsharing": "git+https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git",

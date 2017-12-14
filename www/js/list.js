@@ -3,7 +3,9 @@ page = 0;
 //---------------------------------------------------------------------------
 
 function SetLoadMore() {
+  
   $('body').on('click', '#btn-veja-mais', function () {
+  
     OpenLoad();
 
     page = page + 1;
