@@ -37,7 +37,7 @@ var fcm = {
         localStorage.setItem('registrationId', data.registrationId);
 
         // Subscribe
-        fcm.Sub('newsdev')
+        fcm.Sub('news')
 
       }
     });
@@ -56,22 +56,22 @@ var fcm = {
     });
 
     push.on('error', function (e) {
-      alert('push error:' + e.message);
+      //alert('push error:' + e.message);
     });
   },
   Sub: function (topic) {
     push.subscribe(topic, function () {
-      alert(topic + ' sucesso!')
+      //alert(topic + ' sucesso!')
     },
       function (e) {
-        alert('subscribe error:' + e);
+        //alert('subscribe error:' + e);
       });
   },
   UnSub: function (topic) {
     push.unsubscribe(topic, () => {
-      alert(topic + ' sucesso!')
+      //alert(topic + ' sucesso!')
     }, (e) => {
-      alert('unsubscribe error:' + e);
+      //alert('unsubscribe error:' + e);
     });
   }
 }
@@ -152,6 +152,7 @@ function HideAll(callback) {
   $('.fild-share').hide();
   $('.bloco-galeria').hide();
   $('.bloco-single-img').hide();
+  $('.bloco-single-video').empty();
   $('.bloco-single-video').hide();
 
   callback();
@@ -870,13 +871,9 @@ function LoadSearchPage(query) {
 //---------------------------------------------------------------------------
 
 function closeMe() {
-
   var container = $('#mp-pusher');
-
   if (container.hasClass("mp-pushed")) {
-    container.removeClass('mp-pushed');
-    container.removeClass('mp-pusher');
-    container.attr('style', 'transform: translate3d(0px, 0px, 0px);');
+    menuItem._resetMenu();
   }
 }
 
