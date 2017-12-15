@@ -102,11 +102,11 @@ var fcm2 = {
     FCMPlugin.onNotification(function (data) {
 
       if (data.wasTapped) {
-        
+
         LoadNewsPage(data.url);
         mypah.push({ page: 'news', url: url });
         history.pushState(null, null, '/news/' + url)
-      } 
+      }
     });
 
   }
@@ -221,6 +221,8 @@ function SetOpenList() {
 
     e.preventDefault();
 
+    closeMe();
+
     LoadBlogsPage();
 
     mypah.push({ page: 'blogs' });
@@ -244,13 +246,10 @@ function SetOpenList() {
   });
 
   $('body').on('click', '.link-menu, .fild-hat', function (e) {
-    closeMe();
-  });
-
-
-  $('body').on('click', '.link-menu, .fild-hat', function (e) {
 
     e.preventDefault();
+
+    closeMe();
 
     var type = $(this).data('type');
     var editorial = $(this).data('editorial');
@@ -871,11 +870,14 @@ function LoadSearchPage(query) {
 //---------------------------------------------------------------------------
 
 function closeMe() {
-  
+
   var container = $('#mp-pusher');
-  container.removeClass('mp-pushed');
-  container.removeClass('mp-pusher');
-  container.attr( 'style', 'transform: translate3d(0px, 0px, 0px);' );
+
+  if (container.hasClass("mp-pushed")) {
+    container.removeClass('mp-pushed');
+    container.removeClass('mp-pusher');
+    container.attr('style', 'transform: translate3d(0px, 0px, 0px);');
+  }
 }
 
 //---------------------------------------------------------------------------
@@ -922,6 +924,11 @@ var app = {
             LoadBlogsPage();
             break;
           }
+        case 'list':
+          {
+            LoadListPage(last.type, last.editorial, last.url);
+            break
+          }
         case 'search':
           {
             LoadSearchPage(last.query);
@@ -932,8 +939,7 @@ var app = {
   },
   onDeviceReady: function () {
 
-    if (device.platform != 'browser')
-    {
+    if (device.platform != 'browser') {
       fcm.initialize();
       fcm2.initialize();
     }
