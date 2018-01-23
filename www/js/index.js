@@ -534,7 +534,7 @@ function LoadBlogs(homeId) {
 
       feed.find(".fild-img").attr("src", element.Img).addClass('center-block');
       feed.find(".fild-blog").data('url', element.Url);
-      feed.find(".fild-titulo").text(element.Titulo);
+      feed.find(".fild-blog-titulo").text(element.Titulo);
 
       //feed.find(".fild-news-url").attr("href", 'news.html?url=' + element.Url);
       feed.find(".fild-news-url").attr('data-url', element.Url);
