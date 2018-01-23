@@ -1,6 +1,6 @@
 {
   "name": "com.tarobanews.app",
-  "version": "1.5.2",
+  "version": "1.5.6",
   "displayName": "Tarobá News",
   "cordova": {
     "platforms": [
