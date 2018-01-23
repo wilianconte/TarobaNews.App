@@ -856,7 +856,10 @@ function LoadSearchPage(query) {
             model.clone().removeClass("hidden feed-model");
 
           feed.find(".fild-img").attr("src", element.Img);
-          feed.find(".fild-news-url").attr("href", 'news.html?url=' + element.Url);
+
+          //feed.find(".fild-news-url").attr("href", 'news.html?url=' + element.Url);
+          feed.find(".fild-news-url").attr('data-url', element.Url);
+
           feed.find(".fild-news-titulo").text(element.Titulo);
           feed.find(".fild-hat").attr('data-type', type);
           feed.find(".fild-hat").attr('data-editorial', element.EditorialUrl);
@@ -910,8 +913,6 @@ var app = {
     }
 
     window.onpopstate = function (event) {
-
-      console.log(mypah);
 
       $('.grupo-footer').focus();
 
